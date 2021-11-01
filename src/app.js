@@ -26,11 +26,11 @@ app.use(express.json());
 app.use(checkUser);
 // route our app
 app.use('/pokemon/get/', pokemonRouter);
-app.use('/pokemon/', queryRouter);
-app.use('pokemon/catch/', catchRouter);
+app.use('/pokemon/catch/', catchRouter);
 app.use('/pokemon/release/', releasePokemon);
-app.use('/info', user);
 app.use('/pokemon/list', listRouter);
+app.use('/pokemon/', queryRouter);
+app.use('/info', user);
 
 app.use('/', express.static('./dist')); // serve main path as static dir
 app.get('/', function (req, res) {
