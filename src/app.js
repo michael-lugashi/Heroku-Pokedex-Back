@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 // const Pokedex = require('pokedex-promise-v2');
 // const P = new Pokedex();
+const path = require('path')
 const pokemonRouter = require('./routers/getPokemon');
 const queryRouter = require('./routers/queryPokemon');
 const catchRouter = require('./routers/putCatchPokemon');
