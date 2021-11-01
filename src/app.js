@@ -27,7 +27,7 @@ app.use(checkUser);
 // route our app
 app.use('/pokemon/get/', pokemonRouter);
 app.use('/pokemon/', queryRouter);
-app.use('/pokemon/catch/', catchRouter);
+app.use('pokemon/catch/', catchRouter);
 app.use('/pokemon/release/', releasePokemon);
 app.use('/info', user);
 app.use('/pokemon/list', listRouter);
