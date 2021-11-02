@@ -8,7 +8,7 @@ const fs = require('fs');
 router.post('', (req, res) => {
 
     if (!fs.existsSync(`../users/${req.body.username}`)){
-        fs.mkdirSync(`../users/${req.body.username}`);
+        fs.mkdirSync(`../users/${req.body.username}`, { recursive: true });
     }
 
     console.log(req.body.username)
