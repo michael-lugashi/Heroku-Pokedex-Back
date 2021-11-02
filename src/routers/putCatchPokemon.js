@@ -28,7 +28,7 @@ router.put('/:id', catchError, (req, res) => {
     };
 
     if (!fs.existsSync(`./src/users/${username}`)) {
-      fs.mkdirSync(`./src/users/${username}`);
+      fs.mkdirSync(`./src/users/${username}`, { recursive: true });
     }
  
     fs.writeFileSync(
